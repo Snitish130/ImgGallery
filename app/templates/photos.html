@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+
+<div class="container pt-2">
+    <div class="row  m-4">
+        <img src="{{photo.image.url}}" class="img-fluid" alt="Responsive image">
+    </div>
+</div>
+        <div class='text-center mb-5'>
+            <a class="btn btn-primary" href="/rotateleftphoto/{{photo.id}}" role="button">Rotate left</a>
+        </div>
+
+        <div class='text-center mb-5'>
+            <a class="btn btn-primary" href="/rotaterightphoto/{{photo.id}}" role="button">Rotate right</a>
+        </div>
+
+        <div class='text-center mb-5'>
+            <a class="btn btn-primary" href="/deletephoto/{{photo.id}}" role="button">Delete Photo</a>
+        </div>
+{% endblock %}
+
